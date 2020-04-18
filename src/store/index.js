@@ -1,17 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import cart from './modules/cart'
-import study from './modules/study'
-import moduleA from './modules/moduleA'
-import studyModel from './modules/studyModel'
-import fooModule from './modules/fooModule'
 import {
   SET_NAME,
   SET_AGE,
   SET_HEIGHT
 } from './mutation-types' // 引入常量
-import { strictEqual } from 'assert';
-import { stat } from 'fs';
 
 Vue.use(Vuex) // 显式地通过 Vue.use() 来安装 Vuex
 
@@ -111,7 +105,7 @@ export default new Vuex.Store({
     },
     // mutation中的SET_NAME
     setName({commit, state}, form) {
-      commit('SET_NAME', form) 
+      commit('SET_NAME', form)
     },
     // 组合 Action
     actionA ({ commit }) {
@@ -132,10 +126,6 @@ export default new Vuex.Store({
     }
   },
   modules: {
-    cart,
-    study,
-    moduleA,
-    studyModel,
-    fooModule
+    cart
   }
 })
